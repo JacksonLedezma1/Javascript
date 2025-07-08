@@ -1,0 +1,17 @@
+/* Estilo general del cuerpo de la página */
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+}
+
+/* Estilo para los enlaces de navegación */
+nav a {
+  margin-right: 15px;      /* Separación entre enlaces */
+  text-decoration: none;   /* Quita el subrayado */
+  color: blue;             /* Color del texto */
+}
+
+/* Estilo cuando el mouse pasa por encima del enlace */
+nav a:hover {
+  text-decoration: underline;  /* Subraya al pasar el cursor */
+}

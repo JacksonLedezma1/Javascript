@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SPA con HTML Templates</title>
+  <link rel="stylesheet" href="styles.css" /> <!-- Se enlaza el archivo CSS externo -->
+</head>
+<body>
+  <!-- Navegación de la aplicación -->
+  <nav>
+    <!-- Cada enlace cambia la ruta usando un hash (#) -->
+    <a href="#/" data-route="/">Inicio</a>
+    <a href="#/about" data-route="about">Acerca</a>
+    <a href="#/contact" data-route="contact">Contacto</a>
+  </nav>
+
+  <!-- Contenedor principal donde se cargará el contenido de cada vista -->
+  <main id="app"></main>
+
+  <!-- Plantillas HTML que serán cargadas dinámicamente según la ruta -->
+  <template id="home">
+    <h1>Bienvenido a la página de inicio</h1>
+    <p>Este es un SPA usando HTML templates.</p>
+  </template>
+
+  <template id="about">
+    <h1>Acerca de</h1>
+    <p>Esta es la sección de información sobre la aplicación.</p>
+  </template>
+
+  <template id="contact">
+    <h1>Contacto</h1>
+    <p>Envíanos un mensaje a contacto@ejemplo.com</p>
+  </template>
+
+  <!-- Archivo JavaScript que maneja la navegación y carga de vistas -->
+  <script src="main.js"></script>
+</body>
+</html>
