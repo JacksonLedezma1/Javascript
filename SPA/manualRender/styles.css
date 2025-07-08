@@ -1,0 +1,43 @@
+/* Estilo global para la página */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Barra de navegación superior */
+nav {
+  background-color: #4CAF50; /* Verde */
+  padding: 1em;
+  display: flex;
+  gap: 1em;
+}
+
+/* Estilos de los enlaces de navegación */
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Efecto hover en los enlaces */
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Contenedor principal para las vistas */
+main#app {
+  padding: 2em;
+  max-width: 800px;
+  margin: 2em auto;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  border-radius: 8px;
+}
+
+/* Estilo para los títulos principales */
+h1 {
+  color: #4CAF50;
+}
