@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es"> <!-- Define el idioma del documento como español -->
+<head>
+  <meta charset="UTF-8"> <!-- Establece la codificación de caracteres a UTF-8 -->
+  <title>SPA con Hash</title> <!-- Título que aparecerá en la pestaña del navegador -->
+  <link rel="stylesheet" href="styles.css"> <!-- Enlaza el archivo de estilos CSS externo -->
+</head>
+<body>
+  <!-- Navegación con enlaces que usan hash (#) para cambiar vistas -->
+  <nav>
+    <a href="#home">Inicio</a>     <!-- Enlace a la vista "home" -->
+    <a href="#about">Acerca</a>    <!-- Enlace a la vista "about" -->
+    <a href="#contact">Contacto</a><!-- Enlace a la vista "contact" -->
+  </nav>
+
+  <!-- Contenedor donde se cargará dinámicamente el contenido según el hash -->
+  <div id="app">
+    <!-- El contenido se cargará aquí mediante JavaScript -->
+  </div>
+
+  <!-- Enlaza el archivo JavaScript externo -->
+  <script src="script.js"></script>
+</body>
+</html>

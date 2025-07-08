@@ -1,0 +1,15 @@
+/* Establece una fuente básica para todo el cuerpo del documento */
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos para los enlaces del menú de navegación */
+nav a {
+  margin: 0 10px;           /* Espaciado entre enlaces */
+  text-decoration: none;    /* Elimina el subrayado predeterminado */
+}
+
+/* Espaciado superior para el contenedor de contenido dinámico */
+#app {
+  margin-top: 20px;
+}
