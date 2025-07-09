@@ -12,7 +12,7 @@ const routes = {
   contact: `
     <h1>Contacto</h1>
     <p>Puedes contactarnos en ejemplo@correo.com</p>
-  `
+  `,
 };
 
 // Esta función se encarga de renderizar el contenido correcto
@@ -20,21 +20,23 @@ const routes = {
 function renderRoute() {
   // Obtiene el valor del hash sin el símbolo "#"
   // Si no hay hash, se usa "home" como ruta predeterminada
-  const hash = location.hash.replace('#', '') || 'home';
+  const hash = location.hash.replace("#", "") || "home";
 
   // Busca la ruta correspondiente en el objeto "routes"
   // Si no existe, se muestra una vista 404
-  const content = routes[hash] || `
+  const content =
+    routes[hash] ||
+    `
     <h1>404</h1>
     <p>Página no encontrada.</p>
   `;
 
   // Inserta el contenido en el contenedor principal
-  document.getElementById('app').innerHTML = content;
+  document.getElementById("app").innerHTML = content;
 }
 
 // Escucha el evento "hashchange", que se dispara cuando cambia el fragmento de la URL
-window.addEventListener('hashchange', renderRoute);
+window.addEventListener("hashchange", renderRoute);
 
 // También ejecuta la función cuando se carga la página por primera vez
-window.addEventListener('load', renderRoute);
+window.addEventListener("load", renderRoute);

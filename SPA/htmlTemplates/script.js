@@ -21,8 +21,8 @@ function loadRoute() {
 
   // Reemplaza el contenido del contenedor principal <main id="app">
   const app = document.getElementById("app");
-  app.innerHTML = "";       // Limpia contenido anterior
-  app.appendChild(view);    // Añade la nueva vista
+  app.innerHTML = ""; // Limpia contenido anterior
+  app.appendChild(view); // Añade la nueva vista
 }
 
 // Escucha cambios en el hash de la URL y carga la ruta correspondiente

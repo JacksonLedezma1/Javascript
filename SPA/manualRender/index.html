@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SPA con JavaScript Puro</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SPA con JavaScript Puro</title>
 
-  <!-- Enlace al archivo de estilos -->
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
+    <!-- Enlace al archivo de estilos -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Barra de navegación -->
+    <nav>
+      <!-- Enlaces que cambian el hash de la URL para navegar entre vistas -->
+      <a href="#home">Inicio</a>
+      <a href="#about">Acerca de</a>
+      <a href="#contact">Contacto</a>
+    </nav>
 
-  <!-- Barra de navegación -->
-  <nav>
-    <!-- Enlaces que cambian el hash de la URL para navegar entre vistas -->
-    <a href="#home">Inicio</a>
-    <a href="#about">Acerca de</a>
-    <a href="#contact">Contacto</a>
-  </nav>
+    <!-- Contenedor donde se renderizan las vistas -->
+    <main id="app">
+      <!-- El contenido dinámico se inserta aquí con JavaScript -->
+    </main>
 
-  <!-- Contenedor donde se renderizan las vistas -->
-  <main id="app">
-    <!-- El contenido dinámico se inserta aquí con JavaScript -->
-  </main>
-
-  <!-- Enlace al archivo JavaScript con la lógica del enrutador -->
-  <script src="router.js"></script>
-</body>
+    <!-- Enlace al archivo JavaScript con la lógica del enrutador -->
+    <script src="script.js"></script>
+  </body>
 </html>
