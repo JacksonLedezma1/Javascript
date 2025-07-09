@@ -1,4 +1,8 @@
-/* Reset básico */
+/*
+  Estilos para la SPA basada en templates HTML.
+  Incluye reset básico, estilos de navegación y del área de vistas.
+*/
+
 * {
   margin: 0;
   padding: 0;
@@ -11,13 +15,27 @@ body {
   color: #333;
   line-height: 1.6;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
 }
 
-/* Navegación */
 nav {
   background-color: #333;
+  padding: 1em;
+  text-align: center;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 1em;
+  text-decoration: none;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main#app {
+  padding: 2em;
+}
   padding: 1rem;
   display: flex;
   gap: 1rem;
