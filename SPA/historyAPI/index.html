@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>SPA con History API</title>
+    <!-- Enlaza el archivo de estilos CSS externo para la SPA -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!--
+      Barra de navegación principal. Cada enlace usa la History API para cambiar la URL
+      y mostrar la vista correspondiente sin recargar la página.
+    -->
+    <nav>
+      <a href="/" data-link>Inicio</a> <!-- Vista principal -->
+      <a href="/about" data-link>Acerca de</a> <!-- Vista de información -->
+      <a href="/contact" data-link>Contacto</a> <!-- Vista de contacto -->
+    </nav>
+
+    <!--
+      Contenedor principal donde se insertará el contenido de la vista seleccionada.
+      El contenido se renderiza dinámicamente desde script.js.
+    -->
+    <main id="app"></main>
+
+    <!-- Enlaza el archivo JavaScript externo que gestiona el enrutamiento y renderizado -->
+    <script src="script.js"></script>
+  </body>
+</html>
