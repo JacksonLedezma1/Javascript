@@ -5,8 +5,8 @@ body {
 
 /* Estilos para los enlaces del menú de navegación */
 nav a {
-  margin: 0 10px;           /* Espaciado entre enlaces */
-  text-decoration: none;    /* Elimina el subrayado predeterminado */
+  margin: 0 10px; /* Espaciado entre enlaces */
+  text-decoration: none; /* Elimina el subrayado predeterminado */
 }
 
 /* Espaciado superior para el contenedor de contenido dinámico */
