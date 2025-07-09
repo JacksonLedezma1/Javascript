@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>SPA con Componentes JS</title>
+    <!-- Enlaza el archivo de estilos CSS externo para la SPA -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!--
+      Barra de navegación principal. Cada enlace cambia el hash de la URL,
+      lo que permite que el JS seleccione y renderice el componente correspondiente.
+    -->
+    <nav>
+      <a href="#home">Inicio</a> <!-- Vista principal -->
+      <a href="#about">Acerca de</a> <!-- Vista de información -->
+      <a href="#contact">Contacto</a> <!-- Vista de contacto -->
+    </nav>
+
+    <!--
+      Contenedor principal donde se insertará el contenido del componente seleccionado.
+      El contenido se renderiza dinámicamente desde script.js.
+    -->
+    <main id="app"></main>
+
+    <!-- Enlaza el archivo JavaScript externo que gestiona el enrutamiento y renderizado -->
+    <script src="script.js"></script>
+  </body>
+</html>
