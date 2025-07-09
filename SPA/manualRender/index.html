@@ -4,23 +4,25 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SPA con JavaScript Puro</title>
-
-    <!-- Enlace al archivo de estilos -->
+    <!-- Enlace al archivo de estilos para la SPA -->
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <!-- Barra de navegación -->
+    <!--
+      Barra de navegación. Los enlaces cambian el hash de la URL,
+      permitiendo que el JS muestre la vista correspondiente sin recargar la página.
+    -->
     <nav>
-      <!-- Enlaces que cambian el hash de la URL para navegar entre vistas -->
-      <a href="#home">Inicio</a>
-      <a href="#about">Acerca de</a>
-      <a href="#contact">Contacto</a>
+      <a href="#home">Inicio</a> <!-- Vista principal -->
+      <a href="#about">Acerca de</a> <!-- Vista de información -->
+      <a href="#contact">Contacto</a> <!-- Vista de contacto -->
     </nav>
 
-    <!-- Contenedor donde se renderizan las vistas -->
-    <main id="app">
-      <!-- El contenido dinámico se inserta aquí con JavaScript -->
-    </main>
+    <!--
+      Contenedor principal donde se renderizan las vistas.
+      El contenido se inserta dinámicamente desde script.js.
+    -->
+    <main id="app"></main>
 
     <!-- Enlace al archivo JavaScript con la lógica del enrutador -->
     <script src="script.js"></script>

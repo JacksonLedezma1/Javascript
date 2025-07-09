@@ -1,4 +1,8 @@
-/* Estilos generales */
+/*
+  Estilos generales para la SPA con hash y vista predeterminada.
+  Incluye estilos para la barra de navegación y el área de contenido.
+*/
+
 body {
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -6,7 +10,6 @@ body {
   color: #333;
 }
 
-/* Barra de navegación */
 nav {
   background-color: #004080;
   padding: 1rem;
@@ -18,15 +21,13 @@ nav {
 nav a {
   color: white;
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s ease;
 }
 
 nav a:hover {
+  text-decoration: underline;
   color: #ffcc00;
 }
 
-/* Contenedor principal */
 main#app {
   padding: 2rem;
   max-width: 800px;
@@ -37,19 +38,11 @@ main#app {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Encabezados */
 main h1 {
   color: #004080;
 }
 
-/* Párrafos */
 main p {
   font-size: 1.1rem;
   line-height: 1.6;
-}
-
-/* Vista 404 */
-main h1:contains("404") {
-  color: red;
-  text-align: center;
 }

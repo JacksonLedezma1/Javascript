@@ -1,5 +1,6 @@
-// Definimos un objeto que contiene las "vistas" de nuestra SPA.
-// Cada clave representa una ruta (ej: "home") y su valor es contenido HTML.
+// SPA con enrutamiento por hash y vista predeterminada
+// Similar a hash/script.js pero muestra 'home' si no hay hash
+
 const routes = {
   home: `
     <h1>Bienvenido a la página de inicio</h1>
@@ -12,31 +13,28 @@ const routes = {
   contact: `
     <h1>Contacto</h1>
     <p>Puedes contactarnos en ejemplo@correo.com</p>
-  `,
+  `
 };
 
-// Esta función se encarga de renderizar el contenido correcto
-// según el "hash" actual en la URL (ej: #home, #about).
 function renderRoute() {
-  // Obtiene el valor del hash sin el símbolo "#"
-  // Si no hay hash, se usa "home" como ruta predeterminada
-  const hash = location.hash.replace("#", "") || "home";
-
-  // Busca la ruta correspondiente en el objeto "routes"
-  // Si no existe, se muestra una vista 404
-  const content =
-    routes[hash] ||
-    `
+  // Si no hay hash, muestra 'home' por defecto
+  const hash = location.hash.replace('#', '') || 'home';
+  const content = routes[hash] || `
     <h1>404</h1>
     <p>Página no encontrada.</p>
   `;
-
-  // Inserta el contenido en el contenedor principal
-  document.getElementById("app").innerHTML = content;
+  document.getElementById('app').innerHTML = content;
 }
 
-// Escucha el evento "hashchange", que se dispara cuando cambia el fragmento de la URL
-window.addEventListener("hashchange", renderRoute);
+window.addEventListener('hashchange', renderRoute);
+window.addEventListener('load', renderRoute);
 
-// También ejecuta la función cuando se carga la página por primera vez
-window.addEventListener("load", renderRoute);
+/*
+
+/*
+Explicación:
+- El enrutamiento es por hash, igual que en hash/script.js.
+- Si la URL no tiene hash, se muestra la vista 'home' por defecto.
+- Las vistas están embebidas como strings multilínea.
+- Si la ruta no existe, se muestra una vista 404.
+*/
