@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>SPA con Fetch de Templates</title>
+    <!-- Enlaza el archivo de estilos CSS externo para la SPA -->
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <!--
+      Barra de navegación principal. Cada enlace cambia el hash de la URL,
+      lo que permite que el JS cargue la vista correspondiente desde un archivo HTML externo.
+    -->
+    <nav>
+      <a href="#/">Inicio</a> <!-- Vista principal -->
+      <a href="#/about">Acerca de</a> <!-- Vista de información -->
+      <a href="#/contact">Contacto</a> <!-- Vista de contacto -->
+    </nav>
+
+    <!--
+      Contenedor principal donde se insertará el contenido de la vista seleccionada.
+      El contenido se carga dinámicamente desde archivos HTML mediante fetch en script.js.
+    -->
+    <main id="app"></main>
+
+    <!-- Enlaza el archivo JavaScript externo que gestiona el enrutamiento y la carga de vistas -->
+    <script src="script.js"></script>
+  </body>
+</html>

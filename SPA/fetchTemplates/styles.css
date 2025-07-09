@@ -1,0 +1,30 @@
+/*
+  Estilos básicos para la SPA que carga vistas externas con fetch.
+  Incluye estilos para la navegación y el área de contenido.
+*/
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9f9f9;
+}
+
+nav {
+  background: #eee;
+  padding: 1em;
+}
+
+nav a {
+  margin-right: 1em;
+  text-decoration: none;
+  color: #333;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+main#app {
+  padding: 2em;
+}
