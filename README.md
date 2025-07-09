@@ -1,16 +1,29 @@
 # Javascript
 
-## Explicación de los archivos JavaScript para SPA
+## Métodos de SPA incluidos en la carpeta `SPA`
 
-En este repositorio encontrarás tres implementaciones diferentes de una Single Page Application (SPA) usando JavaScript puro. Cada carpeta contiene un enfoque distinto para el enrutamiento y renderizado de vistas:
+En este repositorio encontrarás diferentes formas de crear una Single Page Application (SPA) usando JavaScript puro. Cada carpeta dentro de `SPA` implementa un método distinto para el enrutamiento y renderizado de vistas. A continuación, una breve explicación de cada uno, resaltando los más fáciles de implementar:
 
-### 1. `SPA/hash/script.js`
-Este archivo implementa un enrutador muy simple basado en el hash de la URL. El objeto `routes` contiene las vistas como propiedades, donde cada clave es el nombre de la ruta y el valor es el HTML a mostrar. Cuando cambia el hash (`#home`, `#about`, etc.), la función `renderRoute` busca la vista correspondiente y la inserta en el elemento con id `app`. Si la ruta no existe, muestra un mensaje 404. El evento `hashchange` y el evento `load` aseguran que la vista correcta se muestre al navegar o recargar la página.
+### 1. `hash` (**Muy fácil**)
+Enrutamiento por hash en la URL. El contenido de cada vista está embebido como string en el JS. Cuando cambia el hash (`#home`, `#about`, etc.), se muestra la vista correspondiente. Es el método más simple y directo para empezar con SPAs.
 
-### 2. `SPA/manualRender/script.js`
-Esta versión es similar a la anterior, pero añade una mejora: si no hay hash en la URL, muestra la vista `home` por defecto. El objeto `routes` almacena las vistas como plantillas de string multilínea. La función `renderRoute` determina la ruta actual y renderiza el contenido adecuado en el elemento `app`. Si la ruta no existe, muestra una vista 404. También utiliza los eventos `hashchange` y `load` para actualizar la vista.
+### 2. `manualRender` (**Muy fácil**)
+Similar a `hash`, pero si no hay hash en la URL, muestra la vista `home` por defecto. También usa strings en el JS para las vistas. Es igual de sencillo y agrega una pequeña mejora de usabilidad.
 
-### 3. `SPA/htmlTemplates/script.js`
-Aquí se utiliza el elemento `<template>` de HTML para definir las vistas. El objeto `routes` asocia rutas como `/`, `/about` y `/contact` con los IDs de los templates. La función `loadRoute` obtiene el hash de la URL, busca el template correspondiente, clona su contenido y lo inserta en el elemento `app`. Si la ruta no existe, por defecto carga la vista `home`. El evento `hashchange` y el evento `DOMContentLoaded` aseguran que la vista se actualice correctamente.
+### 3. `htmlTemplates`
+Usa elementos `<template>` en el HTML para definir las vistas. El JS selecciona y clona el template correspondiente según el hash. Permite separar el HTML de cada vista, pero sigue usando el hash para el enrutamiento.
 
-Cada enfoque muestra una manera diferente de gestionar el enrutamiento y el renderizado de vistas en una SPA sin frameworks externos.
+### 4. `historyAPI`
+Utiliza la History API (`pushState` y `popstate`) para cambiar la URL y navegar entre vistas sin recargar la página y sin usar hash. Permite URLs limpias y una experiencia más profesional, pero requiere un poco más de lógica y configuración (por ejemplo, en el servidor).
+
+### 5. `fetchTemplates`
+Carga archivos HTML externos usando `fetch` según el hash de la URL. Cada vista es un archivo HTML independiente que se inserta dinámicamente en el DOM. Es útil para proyectos donde se quiere separar completamente el HTML de cada vista.
+
+### 6. `componentRender`
+Cada vista es una función JS (componente) que retorna HTML. El enrutador elige el componente según el hash y lo renderiza. Permite organizar el código en funciones reutilizables y separar la lógica de cada vista.
+
+---
+
+**Recomendación:** Si buscas aprender o prototipar rápidamente, comienza por los métodos `hash` o `manualRender`. Son los más fáciles de entender y modificar.
+
+Cada enfoque muestra una manera diferente de gestionar el enrutamiento y el renderizado de vistas en una SPA sin frameworks externos. Estas técnicas pueden combinarse o adaptarse según las necesidades del proyecto.
