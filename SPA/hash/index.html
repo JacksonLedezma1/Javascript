@@ -1,31 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
-  <!-- Define el idioma del documento como español -->
   <head>
     <meta charset="UTF-8" />
-    <!-- Establece la codificación de caracteres a UTF-8 -->
     <title>SPA con Hash</title>
-    <!-- Título que aparecerá en la pestaña del navegador -->
+    <!-- Enlaza el archivo de estilos CSS externo para la SPA -->
     <link rel="stylesheet" href="styles.css" />
-    <!-- Enlaza el archivo de estilos CSS externo -->
   </head>
   <body>
-    <!-- Navegación con enlaces que usan hash (#) para cambiar vistas -->
+    <!--
+      Navegación principal. Cada enlace cambia el hash de la URL (#),
+      lo que permite que el JS muestre la vista correspondiente sin recargar la página.
+    -->
     <nav>
-      <a href="#home">Inicio</a>
-      <!-- Enlace a la vista "home" -->
-      <a href="#about">Acerca</a>
-      <!-- Enlace a la vista "about" -->
-      <a href="#contact">Contacto</a
-      ><!-- Enlace a la vista "contact" -->
+      <a href="#home">Inicio</a> <!-- Vista principal -->
+      <a href="#about">Acerca</a> <!-- Vista de información -->
+      <a href="#contact">Contacto</a> <!-- Vista de contacto -->
     </nav>
 
-    <!-- Contenedor donde se cargará dinámicamente el contenido según el hash -->
-    <div id="app">
-      <!-- El contenido se cargará aquí mediante JavaScript -->
-    </div>
+    <!--
+      Contenedor donde se insertará el contenido de la vista seleccionada.
+      El contenido se gestiona dinámicamente desde script.js.
+    -->
+    <div id="app"></div>
 
-    <!-- Enlaza el archivo JavaScript externo -->
+    <!-- Enlaza el archivo JavaScript externo que gestiona el enrutamiento y renderizado -->
     <script src="script.js"></script>
   </body>
 </html>
