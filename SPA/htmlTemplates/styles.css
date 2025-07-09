@@ -1,50 +1,25 @@
 /*
-  Estilos para la SPA basada en templates HTML.
-  Incluye reset básico, estilos de navegación y del área de vistas.
+  Estilos básicos para la SPA (unificados con el resto de proyectos)
+  Incluye estilos para la navegación y el área de contenido.
 */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f4f4;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f9f9f9;
   color: #333;
-  line-height: 1.6;
-  min-height: 100vh;
 }
 
 nav {
-  background-color: #333;
+  background: #eee;
   padding: 1em;
   text-align: center;
 }
 
 nav a {
-  color: #fff;
   margin: 0 1em;
   text-decoration: none;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-main#app {
-  padding: 2em;
-}
-  padding: 1rem;
-  display: flex;
-  gap: 1rem;
-  justify-content: center;
-}
-
-nav a {
-  color: #fff;
-  text-decoration: none;
+  color: #333;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: background-color 0.3s ease;
@@ -52,21 +27,18 @@ nav a {
 
 nav a:hover,
 nav a.active {
-  background-color: #555;
+  background-color: #ccc;
 }
 
-/* Contenedor principal */
 main#app {
-  flex-grow: 1;
-  padding: 2rem;
+  margin: 2rem auto 0 auto;
+  padding: 2em;
   max-width: 800px;
-  margin: 2rem auto;
   background: #fff;
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Estilos de los encabezados */
 h1 {
   margin-bottom: 1rem;
   color: #2c3e50;
@@ -74,4 +46,5 @@ h1 {
 
 p {
   font-size: 1.1rem;
+  line-height: 1.6;
 }

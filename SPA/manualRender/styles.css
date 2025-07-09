@@ -1,48 +1,50 @@
 /*
-  Estilos generales para la SPA con hash y vista predeterminada.
-  Incluye estilos para la barra de navegación y el área de contenido.
+  Estilos básicos para la SPA (unificados con el resto de proyectos)
+  Incluye estilos para la navegación y el área de contenido.
 */
 
 body {
+  font-family: Arial, sans-serif;
   margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f7f9fc;
+  background: #f9f9f9;
   color: #333;
 }
 
 nav {
-  background-color: #004080;
-  padding: 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
+  background: #eee;
+  padding: 1em;
+  text-align: center;
 }
 
 nav a {
-  color: white;
+  margin: 0 1em;
   text-decoration: none;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
 }
 
-nav a:hover {
-  text-decoration: underline;
-  color: #ffcc00;
+nav a:hover,
+nav a.active {
+  background-color: #ccc;
 }
 
 main#app {
-  padding: 2rem;
+  margin: 2rem auto 0 auto;
+  padding: 2em;
   max-width: 800px;
-  margin: auto;
-  background-color: white;
-  border-radius: 10px;
-  margin-top: 2rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-main h1 {
-  color: #004080;
+h1 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
 }
 
-main p {
+p {
   font-size: 1.1rem;
   line-height: 1.6;
 }
