@@ -1,0 +1,8 @@
+/*
+  Estilos para el ejemplo de async/await
+  - Fondo claro, botón y lista con sombra
+*/
+body { font-family: Arial, sans-serif; margin: 2em; background: #f9f9f9; }
+h1 { color: #2980b9; }
+button { padding: 0.5em 1em; margin-bottom: 1em; }
+ul { background: #fff; padding: 1em; border-radius: 5px; box-shadow: 0 2px 4px #0001; }

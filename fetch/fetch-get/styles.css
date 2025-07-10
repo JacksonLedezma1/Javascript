@@ -1,0 +1,10 @@
+/*
+  Estilos básicos para el ejemplo de fetch GET
+  - Fondo claro y tipografía legible
+  - Botón destacado
+  - Lista con fondo blanco y sombra
+*/
+body { font-family: Arial, sans-serif; margin: 2em; background: #f9f9f9; }
+h1 { color: #2c3e50; }
+button { padding: 0.5em 1em; margin-bottom: 1em; }
+ul { background: #fff; padding: 1em; border-radius: 5px; box-shadow: 0 2px 4px #0001; }

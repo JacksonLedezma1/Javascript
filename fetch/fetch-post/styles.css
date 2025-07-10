@@ -1,0 +1,11 @@
+/*
+  Estilos para el formulario de creación de posts
+  - Fondo claro, inputs y botón con separación
+  - Mensaje de resultado en verde
+*/
+body { font-family: Arial, sans-serif; margin: 2em; background: #f9f9f9; }
+h1 { color: #2c3e50; }
+form { margin-bottom: 1em; }
+input { margin-right: 0.5em; padding: 0.3em; }
+button { padding: 0.5em 1em; }
+#result { margin-top: 1em; color: green; }
