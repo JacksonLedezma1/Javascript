@@ -1,4 +1,27 @@
 document.getElementById('postForm').addEventListener('submit', async (e) => {
+  /*
+    Alternativa usando .then() y .catch():
+    document.getElementById('postForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const title = document.getElementById('title').value;
+      const author = document.getElementById('author').value;
+      fetch('http://localhost:3000/posts', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ title, author })
+      })
+        .then(response => response.json())
+        .then(data => {
+          document.getElementById('result').textContent = `Post creado con ID: ${data.id}`;
+        })
+        .catch(error => {
+          document.getElementById('result').textContent = 'Error: ' + error.message;
+        });
+    });
+
+    // La diferencia principal es que .then()/.catch() encadena promesas, mientras que async/await permite escribir el código de forma más secuencial y legible.
+    // Ambos métodos son válidos, pero async/await es más moderno y fácil de leer cuando hay varias operaciones asíncronas.
+  */
   // Previene el comportamiento por defecto del formulario (recargar la página)
   e.preventDefault();
 

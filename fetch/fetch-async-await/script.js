@@ -1,4 +1,27 @@
 document.getElementById('loadComments').addEventListener('click', async () => {
+  /*
+    Alternativa usando .then() y .catch():
+    fetch('http://localhost:3000/comments')
+      .then(response => {
+        if (!response.ok) throw new Error('No se pudieron cargar los comentarios');
+        return response.json();
+      })
+      .then(comments => {
+        const list = document.getElementById('commentsList');
+        list.innerHTML = '';
+        comments.forEach(comment => {
+          const li = document.createElement('li');
+          li.textContent = `${comment.body} (postId: ${comment.postId})`;
+          list.appendChild(li);
+        });
+      })
+      .catch(error => {
+        alert(error.message);
+      });
+
+    // La diferencia principal es que .then()/.catch() encadena promesas, mientras que async/await permite escribir el código de forma más secuencial y legible.
+    // Ambos métodos son válidos, pero async/await es más moderno y fácil de leer cuando hay varias operaciones asíncronas.
+  */
   try {
     // Realiza una petición GET para obtener los comentarios
     const response = await fetch('http://localhost:3000/comments');
